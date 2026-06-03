@@ -1,5 +1,5 @@
 """
-Seed the database with impressive sample data for the portfolio.
+Seed the database with Keerthi Prasanth S's portfolio data.
 Called once on first startup when the DB is empty.
 """
 
@@ -11,28 +11,30 @@ from app.models import About, Project, Skill, SocialLink, TimelineEntry
 
 
 def seed_database(db: Session) -> None:
-    """Populate every table with realistic sample data."""
+    """Populate every table with real portfolio data."""
 
     # ── About ─────────────────────────────────────────────────────────────
     about = About(
         id=1,
-        name="Alex Rivera",
+        name="Keerthi Prasanth S",
         tagline="Designer & Video Editor — Crafting Visual Stories",
         bio=(
-            "I'm a passionate creative professional with over 6 years of experience "
-            "spanning brand identity design, video editing, and motion graphics. I "
-            "believe every project is an opportunity to tell a story that resonates — "
-            "whether it's a 30-second social spot or a complete brand overhaul. My work "
-            "blends bold aesthetics with strategic thinking, helping brands stand out in "
-            "crowded markets.\n\n"
-            "When I'm not pushing pixels or cutting timelines, you'll find me exploring "
-            "experimental typography, shooting street photography, or diving into the "
-            "latest design trends. I thrive on collaboration and love turning ambitious "
-            "ideas into polished, scroll-stopping visuals. Let's create something "
-            "extraordinary together."
+            "I'm a creative designer and video editor currently pursuing my MCA at "
+            "SRM Institute of Science and Technology, Kattankulathur. With hands-on "
+            "experience in video editing, graphic design, and digital marketing, I "
+            "bring ideas to life through compelling visuals and engaging content. "
+            "During my internship at SRM Tamilperayam, I honed my skills in social "
+            "media management, video production, and design automation.\n\n"
+            "Beyond design, I'm passionate about technology — from building AI-powered "
+            "applications to web development with Python, HTML, and CSS. I've been "
+            "recognized with a World Records Union Certificate and an All India Books "
+            "of Record for organizing cultural fests with 6000+ students. As the Overall "
+            "Students Convenor of Paarivendhar Students Tamil Association at SRMIST, I "
+            "thrive on leadership, creativity, and turning ambitious ideas into reality. "
+            "Let's create something extraordinary together."
         ),
-        photo_url="/assets/alex-photo.jpg",
-        resume_url="/assets/alex-rivera-resume.pdf",
+        photo_url="/assets/keerthi-photo.jpg",
+        resume_url="/assets/keerthi-prasanth-resume.pdf",
         availability="available",
     )
     db.add(about)
@@ -40,112 +42,113 @@ def seed_database(db: Session) -> None:
     # ── Projects ──────────────────────────────────────────────────────────
     projects = [
         Project(
-            title="Neon Dreams",
+            title="Smart Election System",
             description=(
-                "A vibrant brand identity system for a futuristic nightlife venue. "
-                "The project included logo design, color palette, typography, "
-                "merchandise mockups, and a full social-media kit that captured the "
-                "electric energy of the brand."
+                "AI-Based Digital Voting Platform built with Python, OpenCV, "
+                "Scikit-learn, and Machine Learning. Developed an intelligent digital "
+                "voting system to improve election security, efficiency, and "
+                "accessibility through AI-driven voter authentication."
             ),
             category="design",
             thumbnail_url="/assets/project1.jpg",
             video_url=None,
-            live_link="https://neondreams.example.com",
-            download_url="/assets/downloads/project1.zip",
-            download_filename="NeonDreams-BrandKit.zip",
-            tags="branding,identity,logo,nightlife",
-            created_at=date(2024, 11, 15),
+            live_link=None,
+            download_url="/assets/downloads/smart-election.zip",
+            download_filename="SmartElection-Project.zip",
+            tags="python,AI,machine learning,OpenCV",
+            created_at=date(2025, 6, 15),
             featured=True,
             sort_order=1,
         ),
         Project(
-            title="Urban Pulse",
+            title="SRM Tamilperayam — Social Media Content",
             description=(
-                "Official music video edit for indie artist Kaia Moon's breakout "
-                "single. Shot across downtown LA, the edit combines rapid-fire cuts "
-                "with dreamy slow-motion sequences and custom LUT color grading."
+                "Designed and edited social media content for SRM Tamilperayam's "
+                "official pages. Created engaging video content, posters, and digital "
+                "assets that boosted engagement and brand visibility across platforms."
             ),
             category="video",
             thumbnail_url="/assets/project2.jpg",
-            video_url="https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            video_url=None,
             live_link=None,
-            download_url="/assets/downloads/project2.zip",
-            download_filename="UrbanPulse-BTS.zip",
-            tags="music video,editing,color grading,indie",
-            created_at=date(2024, 9, 20),
+            download_url="/assets/downloads/tamilperayam-content.zip",
+            download_filename="Tamilperayam-Portfolio.zip",
+            tags="video editing,social media,design,content creation",
+            created_at=date(2024, 8, 20),
             featured=True,
             sort_order=2,
         ),
         Project(
-            title="Ethereal Flow",
+            title="Vande Mataram — World Record Event",
             description=(
-                "A 90-second motion graphics reel showcasing fluid simulations, "
-                "particle systems, and kinetic typography. Created in After Effects "
-                "and Cinema 4D to demonstrate versatility across 2D and 3D animation."
+                "Coordinated the historic Largest Human Formation of the word "
+                "'Vande Mataram' at SRM Institute of Science and Technology. "
+                "Recognized by the World Records Union Certificate. Handled "
+                "technical & media coordination for this massive event."
             ),
-            category="motion",
+            category="branding",
             thumbnail_url="/assets/project3.jpg",
-            video_url="https://www.youtube.com/watch?v=ScMzIvxBSi4",
+            video_url=None,
             live_link=None,
-            download_url="/assets/downloads/project3.zip",
-            download_filename="EtherealFlow-Reel.zip",
-            tags="motion graphics,animation,3D,reel",
-            created_at=date(2024, 7, 5),
+            download_url="/assets/downloads/vande-mataram.zip",
+            download_filename="VandeMataram-Event.zip",
+            tags="event management,world record,coordination,media",
+            created_at=date(2026, 1, 15),
             featured=True,
             sort_order=3,
         ),
         Project(
-            title="Luxe Minimal",
+            title="Sol Thamizha Sol — Cultural Fest",
             description=(
-                "Complete brand identity for a high-end skincare line. The minimal "
-                "design language — muted earth tones, refined serif typography, and "
-                "foil-stamped packaging — communicates understated luxury."
+                "Organized and designed branding materials for 'Sol Thamizha Sol' "
+                "cultural fest. Recognized by the Chancellor of SRMIST. Created "
+                "posters, video promotions, and event branding that attracted "
+                "6000+ students."
             ),
-            category="branding",
+            category="design",
             thumbnail_url="/assets/project4.jpg",
             video_url=None,
-            live_link="https://luxeminimal.example.com",
-            download_url="/assets/downloads/project4.zip",
-            download_filename="LuxeMinimal-Guidelines.zip",
-            tags="luxury,branding,packaging,skincare",
-            created_at=date(2024, 5, 12),
-            featured=False,
+            live_link=None,
+            download_url="/assets/downloads/sol-thamizha.zip",
+            download_filename="SolThamizha-Branding.zip",
+            tags="cultural fest,branding,poster design,event",
+            created_at=date(2025, 3, 10),
+            featured=True,
             sort_order=4,
         ),
         Project(
-            title="Chromatic",
+            title="Digital Marketing Campaign",
             description=(
-                "Color grading and finishing for the award-winning short film "
-                "'Chromatic.' The grade transforms flat LOG footage into a richly "
-                "saturated, film-emulation look inspired by 1970s cinema."
+                "Completed Social Media Bootcamp for Digital Marketing from Zoho Social. "
+                "Applied learnings to create data-driven social media strategies, "
+                "content calendars, and performance analytics for real-world campaigns."
             ),
-            category="video",
+            category="branding",
             thumbnail_url="/assets/project5.jpg",
-            video_url="https://www.youtube.com/watch?v=LXb3EKWsInQ",
+            video_url=None,
             live_link=None,
-            download_url="/assets/downloads/project5.zip",
-            download_filename="Chromatic-Stills.zip",
-            tags="short film,color grading,DaVinci Resolve,cinema",
-            created_at=date(2024, 3, 8),
+            download_url="/assets/downloads/digital-marketing.zip",
+            download_filename="DigitalMarketing-Campaign.zip",
+            tags="digital marketing,social media,zoho,strategy",
+            created_at=date(2026, 2, 5),
             featured=False,
             sort_order=5,
         ),
         Project(
-            title="Geometric Fusion",
+            title="UI/UX Design Portfolio",
             description=(
-                "A limited-edition poster series exploring the intersection of "
-                "geometric abstraction and organic textures. Each poster uses a "
-                "restricted palette and mathematical compositions to create visually "
-                "striking artwork."
+                "A collection of user-centered design work exploring UI/UX fundamentals. "
+                "Built during the UI/UX Fundamentals certification from NxtWave. "
+                "Includes wireframes, prototypes, and responsive web layouts."
             ),
             category="design",
             thumbnail_url="/assets/project6.jpg",
             video_url=None,
             live_link=None,
-            download_url="/assets/downloads/project6.zip",
-            download_filename="GeometricFusion-Posters.zip",
-            tags="poster,geometric,abstract,print",
-            created_at=date(2024, 1, 22),
+            download_url="/assets/downloads/uiux-portfolio.zip",
+            download_filename="UIUX-Portfolio.zip",
+            tags="UI/UX,wireframing,prototyping,web design",
+            created_at=date(2025, 5, 18),
             featured=False,
             sort_order=6,
         ),
@@ -154,75 +157,77 @@ def seed_database(db: Session) -> None:
 
     # ── Social Links ──────────────────────────────────────────────────────
     socials = [
-        SocialLink(platform="Instagram", url="https://instagram.com/alexrivera", icon="FaInstagram", username="@alexrivera", sort_order=1),
-        SocialLink(platform="YouTube", url="https://youtube.com/@alexrivera", icon="FaYoutube", username="Alex Rivera", sort_order=2),
-        SocialLink(platform="Behance", url="https://behance.net/alexrivera", icon="FaBehance", username="alexrivera", sort_order=3),
-        SocialLink(platform="Dribbble", url="https://dribbble.com/alexrivera", icon="FaDribbble", username="alexrivera", sort_order=4),
-        SocialLink(platform="LinkedIn", url="https://linkedin.com/in/alexrivera", icon="FaLinkedin", username="Alex Rivera", sort_order=5),
-        SocialLink(platform="X", url="https://x.com/alexrivera", icon="FaXTwitter", username="@alexrivera", sort_order=6),
+        SocialLink(platform="LinkedIn", url="https://linkedin.com/in/keerthiprasanths", icon="FaLinkedin", username="Keerthi Prasanth S", sort_order=1),
+        SocialLink(platform="Instagram", url="https://instagram.com/keerthiprasanths", icon="FaInstagram", username="@keerthiprasanths", sort_order=2),
+        SocialLink(platform="YouTube", url="https://youtube.com/@keerthiprasanths", icon="FaYoutube", username="Keerthi Prasanth S", sort_order=3),
+        SocialLink(platform="Behance", url="https://behance.net/keerthiprasanths", icon="FaBehance", username="keerthiprasanths", sort_order=4),
+        SocialLink(platform="GitHub", url="https://github.com/keerthiprasanths", icon="FaGithub", username="keerthiprasanths", sort_order=5),
+        SocialLink(platform="X", url="https://x.com/keerthiprasanths", icon="FaXTwitter", username="@keerthiprasanths", sort_order=6),
     ]
     db.add_all(socials)
 
     # ── Skills ────────────────────────────────────────────────────────────
     skills = [
-        Skill(name="Photoshop", icon="Ps", proficiency=95, category="design"),
-        Skill(name="After Effects", icon="Ae", proficiency=90, category="video"),
-        Skill(name="Premiere Pro", icon="Pr", proficiency=92, category="video"),
-        Skill(name="Figma", icon="Fg", proficiency=88, category="design"),
-        Skill(name="Illustrator", icon="Ai", proficiency=85, category="design"),
-        Skill(name="DaVinci Resolve", icon="Dv", proficiency=80, category="video"),
-        Skill(name="Cinema 4D", icon="C4D", proficiency=75, category="video"),
-        Skill(name="Blender", icon="Bl", proficiency=70, category="design"),
+        Skill(name="Adobe Photoshop", icon="Ps", proficiency=90, category="design"),
+        Skill(name="Video Editing", icon="Ve", proficiency=88, category="video"),
+        Skill(name="Python", icon="Py", proficiency=85, category="design"),
+        Skill(name="HTML & CSS", icon="Ht", proficiency=88, category="design"),
+        Skill(name="Digital Marketing", icon="Dm", proficiency=82, category="design"),
+        Skill(name="UI/UX Design", icon="Ux", proficiency=78, category="design"),
+        Skill(name="Graphic Design", icon="Gd", proficiency=85, category="design"),
+        Skill(name="Social Media Management", icon="Sm", proficiency=80, category="design"),
     ]
     db.add_all(skills)
 
     # ── Timeline ──────────────────────────────────────────────────────────
     timeline = [
         TimelineEntry(
-            title="Senior Designer",
-            organization="Creative Co",
+            title="MCA — Master of Computer Applications",
+            organization="SRM Institute of Science and Technology, Kattankulathur",
             description=(
-                "Lead visual design for flagship clients, mentor junior designers, "
-                "and drive the creative direction of multi-platform campaigns."
+                "Currently pursuing MCA with 7.8 CGPA. Deepening expertise in "
+                "software development, AI/ML, and full-stack web technologies."
             ),
-            start_date="2023",
-            end_date="Present",
-            type="work",
+            start_date="2024",
+            end_date="2026",
+            type="education",
             sort_order=1,
         ),
         TimelineEntry(
-            title="Freelance Video Editor",
-            organization="Self-Employed",
+            title="Video Editor & Designer — Intern",
+            organization="SRM Tamilperayam",
             description=(
-                "Delivered end-to-end video production for indie artists, startups, "
-                "and agencies — from storyboarding through final color grade and delivery."
+                "Managed social media pages, handled documentation, designed visual "
+                "content, and edited videos. Worked with digital systems tools, "
+                "automation, and technical operations."
             ),
-            start_date="2021",
-            end_date="2023",
+            start_date="June 2024",
+            end_date="August 2024",
             type="work",
             sort_order=2,
         ),
         TimelineEntry(
-            title="Junior Designer",
-            organization="Design Hub",
+            title="Overall Students Convenor",
+            organization="Paarivendhar Students Tamil Association, SRMIST",
             description=(
-                "Created brand identities, social assets, and print collateral for a "
-                "diverse roster of clients across fashion, tech, and hospitality."
+                "Leading the association as Overall Students Convenor. Previously served "
+                "as Technical & Media Convenor from 2022-2025. Organized cultural fests "
+                "recognized by All India Books of Record and Nova World Record."
             ),
-            start_date="2019",
-            end_date="2021",
+            start_date="2022",
+            end_date="2026",
             type="work",
             sort_order=3,
         ),
         TimelineEntry(
-            title="BA in Graphic Design",
-            organization="Art University",
+            title="B.Sc Computer Science",
+            organization="SRM Arts and Science College, Kattankulathur",
             description=(
-                "Four-year program covering typography, color theory, UX fundamentals, "
-                "motion design, and portfolio development. Graduated with honors."
+                "Graduated with 77%. Built strong foundation in programming, "
+                "data structures, and web development technologies."
             ),
-            start_date="2015",
-            end_date="2019",
+            start_date="2022",
+            end_date="2025",
             type="education",
             sort_order=4,
         ),

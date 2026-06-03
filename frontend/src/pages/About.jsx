@@ -5,32 +5,28 @@ import StatsCounter from '../components/StatsCounter';
 import { getAbout, getSkills, getTimeline } from '../services/api';
 
 const fallbackAbout = {
-  name: 'Alex Rivera',
-  bio: "I'm a multidisciplinary designer and video editor with 5+ years of experience crafting visual stories that captivate audiences. From brand identities to cinematic reels, I bring ideas to life with precision and passion.\n\nMy work spans across branding, motion design, video editing, and creative direction. I believe great design is invisible — it guides, inspires, and moves people without them realizing why.",
+  name: 'Keerthi Prasanth S',
+  bio: "I'm a creative designer and video editor currently pursuing my MCA at SRM Institute of Science and Technology, Kattankulathur. With hands-on experience in video editing, graphic design, and digital marketing, I bring ideas to life through compelling visuals and engaging content.\n\nBeyond design, I'm passionate about technology — from building AI-powered applications to web development with Python, HTML, and CSS. I've been recognized with a World Records Union Certificate for organizing events with 6000+ students. Let's create something extraordinary together.",
   photo_url: null,
   availability: 'Available for Work',
 };
 
 const fallbackSkills = [
-  { name: 'After Effects', proficiency: 95 },
-  { name: 'Premiere Pro', proficiency: 92 },
-  { name: 'Photoshop', proficiency: 90 },
-  { name: 'Illustrator', proficiency: 85 },
-  { name: 'Figma', proficiency: 88 },
-  { name: 'DaVinci Resolve', proficiency: 80 },
-  { name: 'Cinema 4D', proficiency: 75 },
-  { name: 'Blender', proficiency: 70 },
-  { name: 'Motion Graphics', proficiency: 93 },
-  { name: 'Color Grading', proficiency: 88 },
-  { name: 'Typography', proficiency: 85 },
-  { name: 'Sound Design', proficiency: 72 },
+  { name: 'Adobe Photoshop', proficiency: 90 },
+  { name: 'Video Editing', proficiency: 88 },
+  { name: 'Python', proficiency: 85 },
+  { name: 'HTML & CSS', proficiency: 88 },
+  { name: 'Digital Marketing', proficiency: 82 },
+  { name: 'UI/UX Design', proficiency: 78 },
+  { name: 'Graphic Design', proficiency: 85 },
+  { name: 'Social Media Management', proficiency: 80 },
 ];
 
 const fallbackTimeline = [
-  { id: 1, title: 'Senior Designer', organization: 'Studio Nova', type: 'work', start_date: '2022', end_date: 'Present', description: 'Leading design and video production for premium clients worldwide.' },
-  { id: 2, title: 'Freelance Video Editor', organization: 'Self-employed', type: 'work', start_date: '2020', end_date: '2022', description: 'Built a portfolio of 50+ projects spanning music videos, commercials, and social campaigns.' },
-  { id: 3, title: 'Junior Designer', organization: 'Creative Pulse Agency', type: 'work', start_date: '2019', end_date: '2020', description: 'Created brand assets and motion graphics for startups and mid-size companies.' },
-  { id: 4, title: 'BFA in Visual Communication', organization: 'School of Visual Arts', type: 'education', start_date: '2015', end_date: '2019', description: 'Graduated with honors. Focused on motion design and brand strategy.' },
+  { id: 1, title: 'MCA', organization: 'SRM Institute of Science and Technology', type: 'education', start_date: '2024', end_date: '2026', description: 'Pursuing Master of Computer Applications with 7.8 CGPA.' },
+  { id: 2, title: 'Video Editor & Designer — Intern', organization: 'SRM Tamilperayam', type: 'work', start_date: 'June 2024', end_date: 'August 2024', description: 'Managed social media, designed visual content, and edited videos.' },
+  { id: 3, title: 'Overall Students Convenor', organization: 'Paarivendhar Students Tamil Association, SRMIST', type: 'work', start_date: '2022', end_date: '2026', description: 'Leading the association. Organized cultural fests recognized by All India Books of Record.' },
+  { id: 4, title: 'B.Sc Computer Science', organization: 'SRM Arts and Science College', type: 'education', start_date: '2022', end_date: '2025', description: 'Graduated with 77%. Strong foundation in programming and web development.' },
 ];
 
 export default function About() {
@@ -90,7 +86,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15, ease: 'easeOut' }}
           >
-            <h2 className="gradient-text">Hello, I'm {about.name || 'Alex Rivera'}</h2>
+            <h2 className="gradient-text">Hello, I'm {about.name || 'Keerthi Prasanth S'}</h2>
             {(about.bio || '').split('\n').filter(Boolean).map((p, i) => (
               <p key={i}>{p}</p>
             ))}

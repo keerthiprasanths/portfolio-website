@@ -33,7 +33,7 @@ export default function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
-        <Link to="/" className="navbar__logo">ALEX RIVERA</Link>
+        <Link to="/" className="navbar__logo">KEERTHI PRASANTH</Link>
 
         <div className="navbar__links">
           {navItems.map((item) => (

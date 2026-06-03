@@ -3,12 +3,12 @@ import { FaInstagram, FaYoutube, FaBehance, FaDribbble, FaLinkedinIn } from 'rea
 import { FaXTwitter } from 'react-icons/fa6';
 
 const socialIcons = [
-  { icon: <FaInstagram />, href: '#', label: 'Instagram' },
-  { icon: <FaYoutube />, href: '#', label: 'YouTube' },
-  { icon: <FaBehance />, href: '#', label: 'Behance' },
-  { icon: <FaDribbble />, href: '#', label: 'Dribbble' },
-  { icon: <FaLinkedinIn />, href: '#', label: 'LinkedIn' },
-  { icon: <FaXTwitter />, href: '#', label: 'X / Twitter' },
+  { icon: <FaLinkedinIn />, href: 'https://linkedin.com/in/keerthiprasanths', label: 'LinkedIn' },
+  { icon: <FaInstagram />, href: 'https://instagram.com/keerthiprasanths', label: 'Instagram' },
+  { icon: <FaYoutube />, href: 'https://youtube.com/@keerthiprasanths', label: 'YouTube' },
+  { icon: <FaBehance />, href: 'https://behance.net/keerthiprasanths', label: 'Behance' },
+  { icon: <FaDribbble />, href: 'https://dribbble.com/keerthiprasanths', label: 'Dribbble' },
+  { icon: <FaXTwitter />, href: 'https://x.com/keerthiprasanths', label: 'X / Twitter' },
 ];
 
 export default function Footer() {
@@ -19,7 +19,7 @@ export default function Footer() {
       <div className="footer__grid">
         {/* Brand */}
         <div className="footer__brand">
-          <h3>ALEX RIVERA</h3>
+          <h3>KEERTHI PRASANTH S</h3>
           <p>
             Designer &amp; Video Editor crafting visual stories that leave a lasting impression. Let's create something extraordinary together.
           </p>
@@ -57,7 +57,7 @@ export default function Footer() {
       </div>
 
       <div className="footer__bottom">
-        <span>&copy; {new Date().getFullYear()} Alex Rivera. All rights reserved.</span>
+        <span>&copy; {new Date().getFullYear()} Keerthi Prasanth S. All rights reserved.</span>
         <span>Made with ❤️ and lots of coffee</span>
       </div>
     </footer>
