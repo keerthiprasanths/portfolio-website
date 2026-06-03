@@ -43,10 +43,14 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# ── CORS — allow React dev servers ────────────────────────────────────────────
+# ── CORS — allow React dev servers and production ─────────────────────────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://portfolio-website-green-seven-89.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
